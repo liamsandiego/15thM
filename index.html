@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam & Ainne's Monthsary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .dancing-script {
+            font-family: 'Dancing Script', cursive;
+        }
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .heart {
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .photo-container {
+            transition: all 0.3s ease;
+        }
+        .photo-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .bg-gradient {
+            background: linear-gradient(135deg, #f8bbd0 0%, #e1bee7 100%);
+        }
+        .letter-paper {
+            background-image: 
+                linear-gradient(#fff9f9 1.1rem, #ccc 1.2rem),
+                linear-gradient(90deg, rgba(255,0,0,0), rgba(255,0,0,0) 1.1rem, #ccc 1.2rem);
+            background-size: 100% 1.2rem, 1.2rem 100%;
+            line-height: 1.2rem;
+            padding: 1.2rem 1rem 0.5rem 1.2rem;
+            min-height: 200px;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gradient min-h-screen poppins text-gray-800">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="dancing-script text-5xl md:text-6xl font-bold text-pink-800 mb-2">Liam & Ainne</h1>
+            <div class="flex items-center justify-center">
+                <div class="h-0.5 bg-pink-300 w-16 md:w-24"></div>
+                <div class="mx-4 text-pink-600 heart text-2xl">❤️</div>
+                <div class="h-0.5 bg-pink-300 w-16 md:w-24"></div>
+            </div>
+            <h2 class="mt-4 text-xl md:text-2xl text-purple-700">Happy Monthsary - June 17th</h2>
+        </header>
+
+        <!-- Photo Gallery -->
+        <section class="mb-12">
+            <h3 class="dancing-script text-3xl text-center mb-6 text-pink-700">Our Memories</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Photo 1 -->
+                <div class="photo-container bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative pb-[75%] bg-pink-100 flex items-center justify-center">
+                        <div id="photo1" class="absolute inset-0 flex items-center justify-center">
+                            <img src="picture1.png" alt="Our First Date" class="object-cover w-full h-full rounded-lg" />
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-center text-gray-600">Favorite Moments</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="photo-container bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative pb-[75%] bg-pink-100 flex items-center justify-center">
+                        <div id="photo2" class="absolute inset-0 flex items-center justify-center">
+                            <img src="picture2.png" alt="Special Moments" class="object-cover w-full h-full rounded-lg" />
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-center text-gray-600">Cutest Moments</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 3 -->
+                <div class="photo-container bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative pb-[75%] bg-pink-100 flex items-center justify-center">
+                        <div id="photo3" class="absolute inset-0 flex items-center justify-center">
+                            <img src="picture3.png" alt="Favorite Memory" class="object-cover w-full h-full rounded-lg" />
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-center text-gray-600">Your Cutest Photo in my Opinion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Letter -->
+        <section class="mb-12">
+            <h3 class="dancing-script text-3xl text-center mb-6 text-pink-700">My Letter to You</h3>
+            
+            <div class="max-w-2xl mx-auto">
+                <!-- Liam's Letter -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-blue-100 py-3 px-4 border-b border-blue-200">
+                        <h4 class="font-semibold text-blue-800">From Liam to Ainne</h4>
+                    </div>
+                    <div class="letter-paper p-6" id="liamLetter" contenteditable="true" style="line-height: 1.5; white-space: pre-line;">
+Love happy monthsaryy! for starters po, I know we've been through a lot this month and these past few months and I get it how heavy it was for you how we can't see each other anytime we wanted. It's the same for me as well po, but then I'm still happy to be able to spend my 15 months with you, and even though madami tayong disagreements, at away. I'm glad that you're always there for me to support me and love me. I am so happy na ikaw yung minahal ko and I never once regret loving you, for me that was one of the greatest decision I've made and I want to be yours forever every moment with you feels like a blessing. I cherish all our memories together and look forward to creating many more.
+
+With all my love,
+
+-Liam
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Moments This Month -->
+        <section class="mb-12">
+            <h3 class="dancing-script text-3xl text-center mb-6 text-pink-700">Special Moments This Month</h3>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-pink-50 rounded-lg p-5 shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="text-pink-500 mr-3">💖</div>
+                            <h4 class="font-semibold">Favorite Memory</h4>
+                        </div>
+                        <p class="text-gray-700" contenteditable="true">Going to National Museum and then MOA with you after enrollment and spending my time with you enjoying every hour, eating ice cream and eating fries.</p>
+                    </div>
+                    
+                    <div class="bg-pink-50 rounded-lg p-5 shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="text-pink-500 mr-3">😊</div>
+                            <h4 class="font-semibold">What I Love About Ainne</h4>
+                        </div>
+                        <p class="text-gray-700" contenteditable="true">I love how she gets prettier when she smiles and her presence calms me.</p>
+                    </div>
+                    
+                    <div class="col-span-1 md:col-span-2 bg-pink-50 rounded-lg p-5 shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="text-pink-500 mr-3">🎁</div>
+                            <h4 class="font-semibold">Looking Forward To</h4>
+                        </div>
+                        <p class="text-gray-700" contenteditable="true">I'm looking forward to be able to hug you and tell you how much I love you in person.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown -->
+        <section class="mb-12 text-center">
+            <h3 class="dancing-script text-3xl mb-6 text-pink-700">Celebrating Our Love</h3>
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
+                <p class="mb-4">Time we've been together:</p>
+                <div class="grid grid-cols-4 gap-4 mb-4">
+                    <div class="bg-pink-100 rounded-lg p-3">
+                        <div id="days" class="text-2xl font-bold text-pink-800">0</div>
+                        <div class="text-xs text-pink-600">Days</div>
+                    </div>
+                    <div class="bg-pink-100 rounded-lg p-3">
+                        <div id="hours" class="text-2xl font-bold text-pink-800">0</div>
+                        <div class="text-xs text-pink-600">Hours</div>
+                    </div>
+                    <div class="bg-pink-100 rounded-lg p-3">
+                        <div id="minutes" class="text-2xl font-bold text-pink-800">0</div>
+                        <div class="text-xs text-pink-600">Minutes</div>
+                    </div>
+                    <div class="bg-pink-100 rounded-lg p-3">
+                        <div id="seconds" class="text-2xl font-bold text-pink-800">0</div>
+                        <div class="text-xs text-pink-600">Seconds</div>
+                    </div>
+                </div>
+                <p class="text-gray-600">Since June 17th</p>
+            </div>
+        </section>
+        
+        <!-- Floating Hearts -->
+        <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+            <div class="heart-container">
+                <!-- Hearts will be added by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center py-6 relative z-10">
+            <p class="dancing-script text-xl text-pink-800">Liam & Ainne</p>
+            <p class="text-sm text-gray-600 mt-2">Forever & Always</p>
+        </footer>
+    </div>
+
+    <script>
+        // Function to update the countdown
+        function updateCountdown() {
+            const startDate = new Date('June 17, 2023 00:00:00').getTime();
+            const now = new Date().getTime();
+            const timeDifference = now - startDate;
+            
+            // Calculate days, hours, minutes, seconds
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            
+            // Update the countdown display
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Function to handle image uploads
+        function setupImageUploads() {
+            const photoElements = ['photo1', 'photo2', 'photo3'];
+            
+            photoElements.forEach(id => {
+                const element = document.getElementById(id);
+                element.addEventListener('click', () => {
+                    alert('In VS Code, replace this placeholder with your image by adding an <img> tag with your image path.');
+                });
+            });
+        }
+        
+        // Create floating hearts
+        function createFloatingHearts() {
+            const container = document.querySelector('.heart-container');
+            const heartCount = 15;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.className = 'floating absolute';
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = `${Math.random() * 100}%`;
+                heart.style.opacity = Math.random() * 0.5 + 0.2;
+                heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+                heart.style.animationDuration = `${Math.random() * 3 + 3}s`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(heart);
+            }
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            setupImageUploads();
+            createFloatingHearts();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'950b4e21e5effed8',t:'MTc1MDA4NzM3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
